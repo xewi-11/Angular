@@ -6,7 +6,7 @@ import { NgModel } from '@angular/forms';
   selector: 'primer-component',
   standalone: false,
   templateUrl: './primercomponent.html',
-  styleUrl: './primercomponent.css',
+  styleUrls: ['./primercomponent.css'],
 })
 export class Primercomponent {
  public titulo:string;
