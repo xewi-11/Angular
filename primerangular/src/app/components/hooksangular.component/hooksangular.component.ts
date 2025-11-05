@@ -7,8 +7,13 @@ import { Component,OnInit,DoCheck } from '@angular/core';
   styleUrls: ['./hooksangular.component.css'],
 })
 export class HooksangularComponent implements OnInit,DoCheck {
+  public mensaje:string;
   constructor() { 
     console.log("Constructor:Primer metodod de inicio component");
+    this.mensaje="Hoy es miercoles";
+  }
+  cambiarMensaje(){
+    this.mensaje="Y mañana juerneees";
   }
   ngOnInit(): void {
     console.log("ngOnInit :Segundo metodo de inicio component");

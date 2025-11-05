@@ -1,0 +1,17 @@
+<div>
+    <h2>{{mensaje}}</h2>
+   <!-- un formulario simepre debe tener un id de angular con la igual a ngform -->
+    <form #userForm="ngForm" (ngSubmit)="recibirDatos()">
+        <!-- los controles deben tener una etiqueta ngmodel apuntando al id para indicar el ngModel se hace asi [(ngModel)]="propiedadDelComponente" -->
+           <label >Nombre</label>
+           <input type="text" name="cajanombre" #cajanombre="ngModel" [(ngModel)]="user.nombre"/>
+           <label >Apellidos</label>
+           <input type="text" name="cajaapellidos" #cajaapellidos="ngModel" [(ngModel)]="user.apellidos"/>
+           <label >Edad</label>
+           <input type="text" name="cajaedad" #cajaedad="ngModel" [(ngModel)]="user.edad"/>
+              <button type="submit">Enviar</button>
+    </form>
+    <h2>
+        Hola {{user.nombre}} {{user.apellidos}} tienes {{user.edad}} años
+    </h2>
+</div>

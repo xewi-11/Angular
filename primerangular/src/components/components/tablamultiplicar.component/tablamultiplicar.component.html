@@ -1,0 +1,45 @@
+<div>
+    <form #tablaForm="ngForm" (ngSubmit)="generarTabla()">
+        <label>Numero</label>
+        <input type="number" name="cajanumero" #cajanumero>
+        <button type="submit">Generar Tabla</button>
+    </form>
+    <div *ngIf="resultado.length>0">
+        <h2>Tabla de multiplicar del {{cajanumero.value}}</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>operacion</th>
+                    <th>resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let num of resultado;let i=index">
+                    <td>{{cajanumero.value}} x {{i + 1}}</td>
+                    <td>{{resultado[i]}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+    </div>
+    @if(resultado.length>0){
+        <table border="1">
+             <thead>
+                <tr>
+                    <th>operacion</th>
+                    <th>resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(op of resultado;track op;let i=$index){
+                    <tr>
+                        <td>{{cajanumero.value}} x {{i + 1}}</td>
+                        <td>{{resultado[i]}}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+        
+    
+</div>
