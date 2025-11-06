@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class PadredeportesComponent {
  public deportesArray:Array<string>;
  public mensaje:string;
-
+ public deporteFavorito!:string;
 
  constructor(){
     this.deportesArray = new Array<string>();
@@ -24,5 +24,7 @@ export class PadredeportesComponent {
 
  seleccionarFavoritoPadre(event:any):void{
     console.log("Padre ha recibido el evento del hijo con el deporte: "+event);
+    this.deporteFavorito=event;
+    this.mensaje="El deporte favorito es: "+this.deporteFavorito;
  }
 }

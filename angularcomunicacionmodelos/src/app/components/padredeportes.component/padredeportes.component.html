@@ -1,8 +1,9 @@
 <div>
+    <h2>{{mensaje}}</h2>
     <ul>
         @for (sport of deportesArray; track sport) {
             <li>
-        <app-hijodeportes [deporte]="sport"/>
+        <app-hijodeportes [deporte]="sport" (seleccionarFavoritoPadre)="seleccionarFavoritoPadre($event)"/>
         </li>
     }
         
