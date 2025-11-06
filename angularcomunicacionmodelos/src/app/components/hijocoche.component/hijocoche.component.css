@@ -1,0 +1,83 @@
+.coche-container {
+  background: linear-gradient(135deg, #060a1f, #0b1a2e);
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
+  font-family: 'Orbitron', 'Poppins', sans-serif;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+/* Título */
+.titulo {
+  font-size: 1.8rem;
+  color: #00ffe0;
+  text-shadow: 0 0 10px #00ffe0, 0 0 25px #00bfa5;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+/* Estado del coche */
+.estado {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.verde {
+  color: #00ff99;
+  text-shadow: 0 0 10px #00ff99, 0 0 20px #00cc66;
+}
+
+.rojo {
+  color: #ff4d4d;
+  text-shadow: 0 0 10px #ff4d4d, 0 0 20px #b30000;
+}
+
+/* Velocidad */
+.velocidad-titulo {
+  color: #00ffe0;
+  margin-top: 1.5rem;
+  text-shadow: 0 0 12px #00ffe0;
+}
+
+/* Botones */
+.botones {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-encender {
+  background: linear-gradient(90deg, #004d4d, #00bfa5);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.btn-acelerar {
+  background: linear-gradient(90deg, #00264d, #007bff);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Hover */
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00ffe0, 0 0 40px #00bfa5;
+  text-shadow: 0 0 10px #fff;
+}

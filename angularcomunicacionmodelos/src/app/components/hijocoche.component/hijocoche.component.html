@@ -1,0 +1,16 @@
+<div class="coche-container">
+  <h2 class="titulo">🚗 Componente Hijo Coche</h2>
+
+  <p><strong>Marca:</strong> {{ car.marca }}</p>
+  <p><strong>Modelo:</strong> {{ car.modelo }}</p>
+  <p class="estado" [ngClass]="{ verde: car.estado==true, rojo:car.estado==false }">
+    {{ mensaje }}
+  </p>
+
+  <h2 class="velocidad-titulo">Velocidad actual: {{ car.velocidad }} km/h</h2>
+
+  <div class="botones">
+    <button (click)="encenderCoche()" class="btn-encender">🔌 Encender/Apagar</button>
+    <button (click)="acelerarCoche()" class="btn-acelerar">🚀 Acelerar</button>
+  </div>
+</div>

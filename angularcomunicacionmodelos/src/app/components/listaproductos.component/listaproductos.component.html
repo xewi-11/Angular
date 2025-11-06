@@ -1,0 +1,17 @@
+<div class="productos-container">
+  <h2 class="productos-titulo">🛸 Modelos de Productos Angular</h2>
+
+  <div class="productos-grid">
+    @for (prod of productos; track $index) {
+      <div class="producto-card">
+        <img
+          [src]="prod.imagen"
+          alt="{{ prod.nombre }}"
+          class="producto-img"
+        />
+        <h3 class="producto-nombre">{{ prod.nombre }}</h3>
+        <p class="producto-precio">$ {{ prod.precio }}</p>
+      </div>
+    }
+  </div>
+</div>
