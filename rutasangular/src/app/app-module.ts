@@ -8,6 +8,8 @@ import { CineComponent } from './components/cine.component/cine.component';
 import { MenuComponent } from './components/menu.component/menu.component';
 import { NotfoundComponent } from './components/notfound.component/notfound.component';
 import { NumerodobleComponent } from './components/numerodoble.component/numerodoble.component';
+import { TablamultiplicarComponent } from './components/tablamultiplicar.component/tablamultiplicar.component';
+import { MenutablaComponent } from './components/menutabla.component/menutabla.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { NumerodobleComponent } from './components/numerodoble.component/numerod
     CineComponent,
     MenuComponent,
     NotfoundComponent,
-    NumerodobleComponent
+    NumerodobleComponent,
+    TablamultiplicarComponent,
+    MenutablaComponent
   ],
   imports: [
     BrowserModule,

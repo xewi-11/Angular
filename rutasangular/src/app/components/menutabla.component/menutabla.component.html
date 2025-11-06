@@ -1,0 +1,10 @@
+<div class="menu-container">
+  <h2 class="menu-title">🚀 Tablas Interestelares</h2>
+  <ul id="menu">
+    @for (num of numeros; track $index) {
+      <li class="menu-item">
+        <a [routerLink]="['/tabla', num]">Tabla de {{ num }}</a>
+      </li>
+    }
+  </ul>
+</div>

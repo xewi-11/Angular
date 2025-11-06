@@ -1,0 +1,13 @@
+<div>
+    <h1>Calcular numero dobble</h1>
+    <button (click)="redirect(23)">Envia Numero</button>
+    <button (click)="goToHome()">Volver a Home</button>
+    @if(numero){
+          <h1 style="color: blue;">El doble de {{numero}} es {{doble}}</h1>
+    }@else{
+          <h1 style="color: red;">No hay parametro</h1>
+          
+
+    }
+   
+</div>

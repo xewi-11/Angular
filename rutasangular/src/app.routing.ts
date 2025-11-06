@@ -6,12 +6,16 @@ import { CineComponent } from './app/components/cine.component/cine.component';
 import { MusicaComponent } from './app/components/musica.component/musica.component';
 import { NotfoundComponent } from './app/components/notfound.component/notfound.component';
 import { NumerodobleComponent } from './app/components/numerodoble.component/numerodoble.component';
+import { TablamultiplicarComponent } from './app/components/tablamultiplicar.component/tablamultiplicar.component';
+
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'cine', component:CineComponent },
     { path: 'musica', component: MusicaComponent },
     { path: 'numerodoble', component: NumerodobleComponent },
+    { path: 'numerodoble/:numero', component: NumerodobleComponent },
+    { path: 'tabla/:numero', component: TablamultiplicarComponent },
     { path: '**', component: NotfoundComponent },
 ];
 

@@ -1,0 +1,62 @@
+/* Fondo cósmico */
+.menu-container {
+  background: radial-gradient(circle at center, #0b0f29 0%, #01010a 100%);
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  font-family: 'Orbitron', 'Poppins', sans-serif;
+}
+
+/* Título con efecto de neón */
+.menu-title {
+  font-size: 2rem;
+  color: #00ffe0;
+  text-shadow: 0 0 10px #00ffe0, 0 0 20px #00bfa5;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+
+/* Lista */
+#menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Cada ítem */
+.menu-item {
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+/* Enlaces */
+.menu-item a {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  color: #00ffe0;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* Hover con efecto neón animado */
+.menu-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00ffe0, 0 0 40px #00bfa5;
+  border-color: #00ffe0;
+}
+
+.menu-item:hover a {
+  color: #fff;
+  text-shadow: 0 0 10px #00ffe0, 0 0 20px #00bfa5;
+}

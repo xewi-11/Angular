@@ -1,0 +1,91 @@
+/* 🌌 Fondo general */
+.tabla-container {
+  text-align: center;
+  background: linear-gradient(135deg, #060a1f 0%, #0b1a2e 100%);
+  color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+  font-family: 'Orbitron', 'Poppins', sans-serif;
+}
+
+/* 🪐 Título */
+.tabla-titulo {
+  font-size: 2rem;
+  color: #00ffe0;
+  text-shadow: 0 0 12px #00ffe0, 0 0 25px #00bfa5;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* 🚀 Contenedor de la tabla */
+.tabla-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  animation: fadeIn 1.2s ease-out;
+}
+
+/* 🌠 Tabla */
+.tabla-interestelar {
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+/* 🧮 Encabezado */
+.tabla-interestelar thead {
+  background: linear-gradient(90deg, #00bfa5, #00ffe0);
+}
+
+.tabla-interestelar th {
+  color: #0b0f29;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ✨ Filas */
+.tabla-interestelar td {
+  color: #39ce0c;
+  text-align: center;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* 🌈 Efecto hover en filas */
+.tabla-interestelar tr:hover td {
+  background: rgba(0, 255, 255, 0.1);
+  transform: scale(1.03);
+  text-shadow: 0 0 8px #00ffe0;
+}
+
+/* 🌟 Animación de aparición */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .tabla-interestelar {
+    width: 95%;
+    font-size: 0.9rem;
+  }
+  .tabla-titulo {
+    font-size: 1.5rem;
+  }
+}

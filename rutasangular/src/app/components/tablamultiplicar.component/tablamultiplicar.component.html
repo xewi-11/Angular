@@ -1,0 +1,26 @@
+@if (numero) {
+  <div class="tabla-container">
+    <h1 class="tabla-titulo">🪐 Tabla de Multiplicar de {{ numero }}</h1>
+  </div>
+}
+
+@if (resultado) {
+  <div class="tabla-wrapper">
+    <table class="tabla-interestelar">
+      <thead>
+        <tr>
+          <th>Operación</th>
+          <th>Resultado</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (res of resultado; track res) {
+          <tr>
+            <td>{{ numero }} × {{ $index+1 }}</td>
+            <td>{{ res }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+}
