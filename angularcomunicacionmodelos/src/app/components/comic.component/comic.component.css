@@ -1,0 +1,82 @@
+.comic-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.comic-card {
+    background: linear-gradient(145deg, #fff6ff, #ffe9f7);
+    border: 3px solid #ffbde6;
+    border-radius: 15px;
+    padding: 1.2rem;
+    width: 240px;
+    box-shadow: 0 0 15px rgba(255, 140, 200, 0.4);
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: floatIn 0.7s ease;
+}
+
+@keyframes floatIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.comic-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 0 25px rgba(255, 62, 165, 0.7);
+}
+
+.comic-titulo {
+    font-size: 1.3rem;
+    color: #ff2e93;
+    text-shadow: 1px 1px #ffa3d2;
+    margin-bottom: 0.4rem;
+}
+
+.comic-descripcion {
+    font-size: 0.95rem;
+    color: #5c4b63;
+    margin-bottom: 0.8rem;
+}
+
+.comic-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ffbde6;
+    margin-bottom: 0.8rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comic-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 182, 193, 0.7);
+}
+
+.boton-favorito {
+    background: linear-gradient(90deg, #ff3ea5, #ff8ad8);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 0.6rem 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 62, 165, 0.6);
+    transition: all 0.3s ease;
+    font-family: "Poppins", "Roboto", sans-serif;
+}
+
+.boton-favorito:hover {
+    background: linear-gradient(90deg, #ff0077, #ffa2e8);
+    box-shadow: 0 0 25px rgba(255, 0, 150, 0.8);
+    transform: scale(1.05);
+}
+
+.comic-vacio {
+    color: #777;
+    font-style: italic;
+    text-align: center;
+}

@@ -1,0 +1,85 @@
+.libreria-container {
+    font-family: "Poppins", "Roboto", sans-serif;
+    background: linear-gradient(135deg, #ffb6c1, #ffe4e1, #b19cd9);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.titulo-principal {
+    font-size: 2.2rem;
+    color: #3b0a45;
+    text-shadow: 2px 2px #ff8cdb;
+    margin-bottom: 0.5rem;
+}
+
+.subtexto {
+    font-size: 1.1rem;
+    color: #4b4b4b;
+    margin-bottom: 2rem;
+}
+
+.comic-favorito {
+    background: linear-gradient(135deg, #ff6ec7, #ffc1e3);
+    border: 4px solid #ff3ea5;
+    box-shadow: 0 0 25px rgba(255, 62, 165, 0.7);
+    padding: 1.5rem;
+    border-radius: 12px;
+    color: #fff;
+    margin-bottom: 2rem;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.comic-favorito:hover {
+    transform: scale(1.08);
+}
+
+.comic-favorito h3 span {
+    color: #fff700;
+    text-shadow: 0 0 10px #fff700, 0 0 20px #ffa500;
+}
+
+.comic-image-favorito {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #fff;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
+    margin-top: 1rem;
+}
+
+.sin-favorito {
+    color: #5a5a5a;
+    font-style: italic;
+}
+
+.comic-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Ejemplo general de estilo para los hijos <app-comic> */
+app-comic {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(80, 80, 80, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+app-comic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.6);
+}

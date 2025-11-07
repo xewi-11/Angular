@@ -5,11 +5,13 @@ import { ListaproductosComponent } from './app/components/listaproductos.compone
 import { HijococheComponent } from './app/components/hijocoche.component/hijocoche.component';
 import { PadrecocheComponent } from './app/components/padrecoche.component/padrecoche.component';
 import { PadredeportesComponent } from './app/components/padredeportes.component/padredeportes.component';
+import { LibreriaComponent } from './app/components/libreria.component/libreria.component';
 
 const routes: Routes = [
     { path: '', component: ListaproductosComponent },
     { path: 'coches', component: PadrecocheComponent },
     { path: 'deportes', component: PadredeportesComponent },
+    { path: 'libreria', component: LibreriaComponent },
     
 ];
 

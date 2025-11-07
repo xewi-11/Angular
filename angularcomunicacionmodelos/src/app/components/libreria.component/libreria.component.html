@@ -1,0 +1,27 @@
+<div class="libreria-container">
+    <h2 class="titulo-principal">📚 Bienvenido a la Librería </h2>
+    <p class="subtexto">Aquí encontrarás una selección de cómics épicos y llenos de emoción.</p>
+     <div>
+        <form class="form-control" #comicForm="ngForm">
+            <input class="form-control" type="text" placeholder="Nombre del cómic" #cajanombre />
+            <input class="form-control" type="text" placeholder="URL de la imagen" #cajaimagen />
+            <input class="form-control" type="text" placeholder="Descripción" #cajadescripcion />
+            <button class="form-control btn btn-success" (click)="nuevoComic()">Agregar Cómic</button>
+        </form>
+     </div><br>
+    @if (comicFavorito) {
+        <div class="comic-favorito">
+            <h3>⭐ Tu cómic favorito es: <span>{{ comicFavorito.titulo }}</span></h3>
+            <p><strong>Autor:</strong> {{ comicFavorito.descripcion }}</p>
+            <img [src]="comicFavorito.imagen" alt="{{ comicFavorito.titulo }}" class="comic-image-favorito"/>
+        </div>
+    } @else {
+        <p class="sin-favorito">No has seleccionado ningún cómic favorito aún.</p>
+    }
+
+    <div class="comic-grid">
+        @for (c of comicsArray; track c;let i=$index) {
+            <app-comic [comic]="c" [index]="i" (seleccionarFavoritoPadre)="seleccionarFavoritoPadre($event)" (seleccionarComicAEliminar)="seleccionarComicAEliminar($event)"></app-comic>
+        }
+    </div>
+</div>

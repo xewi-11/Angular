@@ -1,0 +1,19 @@
+<div class="comic-wrapper">
+    @if (comic) {
+        <div class="comic-card">
+            <h3 class="comic-titulo">{{ comic.titulo }}</h3>
+            <p class="comic-descripcion"><strong>Autor:</strong> {{ comic.descripcion }}</p>
+            <img [src]="comic.imagen" alt="{{ comic.titulo }}" class="comic-image" />
+            
+            <!-- Botón arreglado -->
+            <button type="button" class="boton-favorito" (click)="seleccionarFavoritoHijo()">
+                ⭐ Seleccionar como favorito
+            </button><br>
+            <button type="button" class="boton-favorito" (click)="eliminarComicHijo()">
+                🗑️ Eliminar cómic
+            </button>
+        </div>
+    } @else {
+        <p class="comic-vacio">No hay información del cómic disponible.</p>
+    }
+</div>
