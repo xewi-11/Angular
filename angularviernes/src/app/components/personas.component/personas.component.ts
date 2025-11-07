@@ -18,8 +18,16 @@ export class PersonasComponent implements OnInit {
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    this._service.getPersonas().subscribe((data:Persona[])=>{
-      this.personas=data;
-    })
+    // this._service.getPersonasAxios().then((data)=>{
+    //   this.personas=data;
+    // })
+
+    this.cargarPersonas();
   }
+  async cargarPersonas() {
+  const personas = await this._service.getPersonasFetch().then((data:any)=>{
+      this.personas=data;
+    });
+  // aquí tienes los datos
+}
 }
