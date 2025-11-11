@@ -1,0 +1,23 @@
+<div class="nav-container">
+  <ul class="nav justify-content-center galactic-nav">
+    <li class="nav-item">
+      <a [routerLink]="['']">🏠 Home </a>
+    </li>
+    <li class="nav-item">
+    <a [routerLink]="['insertar']"> 👤 Insertar Personaje </a>
+
+    </li>
+    <li class="nav-item">
+    <a [routerLink]="['actualizar']"> 👤 Actualizar Personaje </a>
+
+    </li>
+    <li class="nav-item">
+          <select class="select-series" #selectedSerie (change)="goToSerie()">
+            <option value="" disabled selected>Series</option>
+            @for( serie of series;track serie;){
+            <option [value]="serie.idSerie">{{serie.nombre}}</option>
+            }
+          </select>
+        </li>
+  </ul>
+</div>

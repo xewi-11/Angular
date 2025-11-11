@@ -1,0 +1,17 @@
+<div>
+    <h2>Personajes de la Serie</h2>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Imagen</th>
+            <th>Detalles</th>
+        </tr>
+        @for(personaje of personajes; track personaje;){
+        <tr>
+            <td>{{personaje.nombre}}</td>
+            <td><img [src]="personaje.imagen" alt="{{personaje.nombre}}" /></td>
+            <td><button (click)="goToPersonajeDetails(personaje.idPersonaje)">Ver Detalles</button></td>
+        </tr>
+        }
+    </table>
+</div>

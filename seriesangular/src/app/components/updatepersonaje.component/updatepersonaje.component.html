@@ -1,0 +1,18 @@
+<div>
+    <form #updateForm="ngForm">
+        <select  #cajaSerie>
+            <option value="" disabled selected>Selecciona una Serie</option>
+            @for (serie of series; track series) {
+                <option [value]="serie.idSerie">{{serie.nombre}}</option>
+            }
+        </select>
+         <select  #cajaPersonaje>
+            <option value="" disabled selected>Selecciona una Serie</option>
+            @for (personaje of personajes; track personaje) {
+                <option [value]="personaje.idPersonaje">{{personaje.nombre}}</option>
+            }
+        </select>
+        <button (click)="updatePersonaje()">Actualizar</button>
+    </form>
+    
+</div>

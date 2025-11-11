@@ -1,0 +1,22 @@
+<div>
+    <form #insertarForm="ngForm">
+         
+         <label for="idPersonaje">idPersonaje:</label>
+        <input type="text" id="idPersonaje" name="idPersonaje" #cajaId />
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" #cajaNombre />
+
+        <label for="imagen">URL de la Imagen:</label>
+        <input type="text" id="imagen" name="imagen" #cajaImagen />
+
+        <select #cajaSelect>
+            <option value="" disabled selected>Selecciona una Serie</option>
+            @for (serie of series; track serie) {
+                <option [value]="serie.idSerie">{{serie.nombre}}</option>
+            }
+        </select>
+
+        <button type="submit" (click)="insertarPersonaje()">Insertar Personaje</button>
+    </form>
+</div>
