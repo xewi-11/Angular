@@ -1,0 +1,24 @@
+<div>
+    <table >
+        <thead>
+            <tr>
+                <th>Número</th>
+                <th>Nombre</th>
+                <th>Localidad</th> 
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(departamento of departamentos; track departamento){
+            <tr>
+                <td>{{ departamento.numero }}</td>
+                <td>{{ departamento.nombre }}</td>
+                <td>{{ departamento.localidad }}</td>
+                <td>
+                   <a [routerLink]="[ 'actualizar/', departamento.numero ]">actualizar</a><br>
+                   <button (click)="eliminarDepartamento(departamento.numero)">eliminar</button>
+                </td>
+            </tr>}
+        </tbody>
+    </table>
+</div>
