@@ -23,6 +23,7 @@ export class Serviceseries {
      return this.http.get(`${environment.urlPersonajes}/${id}`);
    }
    insertarPersonaje(personaje:any):Observable<any>{
+    let personajJson=JSON.stringify(personaje);
      return this.http.post(environment.urlPersonajes,personaje);
    }
    getAllPersonajes():Observable<any>{

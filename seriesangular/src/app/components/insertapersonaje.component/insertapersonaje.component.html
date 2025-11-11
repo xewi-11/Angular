@@ -12,7 +12,7 @@
 
         <select #cajaSelect>
             <option value="" disabled selected>Selecciona una Serie</option>
-            @for (serie of series; track series) {
+            @for (serie of series; track serie) {
                 <option [value]="serie.idSerie">{{serie.nombre}}</option>
             }
         </select>
