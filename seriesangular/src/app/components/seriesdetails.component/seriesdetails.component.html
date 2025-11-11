@@ -1,0 +1,11 @@
+<div>
+    <h2>Detalles de la Serie</h2>
+    @if(serie){
+    <p><strong>Nombre:</strong> {{serie.nombre}}</p>
+    <p><strong>Año:</strong> {{serie.anyo}}</p>
+    <p><strong>Puntuación:</strong> {{serie.puntuacion}}</p>
+    <img [src]="serie.imagen" alt="{{serie.nombre}}" />
+    <button (click)="goToPersonajes()">Ver Personajes</button>
+    <button (click)="goToHome()">Volver a home</button>
+    }
+</div>

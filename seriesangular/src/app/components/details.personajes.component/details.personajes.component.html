@@ -1,0 +1,8 @@
+<div>
+    <h2>Detalles del Personaje</h2>
+    @if(personaje){
+    <p><strong>Nombre:</strong> {{personaje.nombre}}</p>
+    <img [src]="personaje.imagen" alt="{{personaje.nombre}}" />
+    <button (click)="goToPersonajes()">Volver a Personajes</button>
+    }
+</div>
