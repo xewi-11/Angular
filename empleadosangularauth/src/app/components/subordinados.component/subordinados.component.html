@@ -1,0 +1,14 @@
+<div>
+    @if (subordinados.length > 0) {
+        <h2>Subordinados:</h2>
+        <ul>
+            @for (subordinado of subordinados; track subordinado) {
+                <li>
+                    {{subordinado.apellido}} - {{subordinado.oficio}}
+                </li>
+            }
+        </ul>
+    } @else {
+        <p>No hay subordinados para este empleado.</p>
+    }
+</div>

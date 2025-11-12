@@ -1,0 +1,13 @@
+<div>
+    <form #loginForm="ngForm">
+        <div>
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" #cajaName>
+        </div>
+        <div>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" #cajaPassword>
+        </div>
+        <button type="submit" (click)="login()" >Iniciar Sesión</button>
+    </form>
+</div>
