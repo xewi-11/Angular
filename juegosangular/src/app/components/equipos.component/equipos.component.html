@@ -1,0 +1,14 @@
+<div>
+@if(equipo) {
+  <div class="card" style="width: 18rem">
+    <img src="{{ equipo.imagen }}" class="card-img-top" alt="Imagen del equipo" />
+    <div class="card-body">
+      <h5 class="card-title">{{ equipo.nombre }}</h5>
+      <p class="card-text">Champions: {{ equipo.champions }}</p>
+      <p class="card-text">Descripcion: {{ equipo.descripcion }}</p>
+    </div>
+  </div>
+  <h2>Jugadores del equipo {{ equipo.nombre }}</h2>
+  <app-jugadores [jugadoresProps]="jugadores"></app-jugadores>
+}
+</div>

@@ -1,0 +1,19 @@
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>ID Jugador</th>
+      <th>Posición</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(jugador of jugadores; track jugador) {
+    <tr>
+      <td>{{ jugador.nombre }}</td>
+      <td>{{ jugador.idJugador }}</td>
+      <td>{{ jugador.posicion }}</td>
+    </tr>
+    }
+  </tbody>
+</table>
